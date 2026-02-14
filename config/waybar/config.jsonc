@@ -1,8 +1,9 @@
 {
   "modules-left": [
-    "ext/workspaces"
+    "ext/workspaces",
     //"dwl/tags",
-    // "dwl/window"
+    "wlr/taskbar",
+    "dwl/window"
   ],
   "modules-right": [
     "custom/sep",
@@ -41,5 +42,23 @@
   "custom/sep": {
     "format": "|",
     "interval": 0
+  },
+  "dwl/window": {
+    "format": "[{layout}]{title}"
+    // "on-click": "bash ~/.config/mango/screenshot.sh"
+    // "max-length": 50
+  },
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": 20,
+    "all-outputs": false,
+    "tooltip-format": "{title}",
+    "markup": true,
+    "on-click": "activate",
+    "on-click-right": "close",
+    "ignore-list": [
+      "Rofi",
+      "wofi"
+    ]
   }
 }
