@@ -180,3 +180,16 @@ hx .
 cd ...
 hx .
 gs
+ga .
+sudo nixos-rebuild switch --flake .#homie
+gc
+gc "dark mode for GTK"
+git push
+gs
+signal-desktop and disown
+signal-desktop
+hx .
+gs
+ga .
+sudo nixos-rebuild switch --flake .#homie
+gs

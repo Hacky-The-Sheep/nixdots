@@ -8,7 +8,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     mangowc = {
-      url = "github:DreamMaoMao/mangowc";
+      url = "github:DreamMaoMao/mango";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
   };
