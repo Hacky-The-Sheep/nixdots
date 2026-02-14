@@ -88,7 +88,7 @@
       source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/waybar/";
       recursive = true;
     };
-    "hyprlock" = {
+    "hypr" = {
       source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/hypr/";
       recursive = true;
     };
