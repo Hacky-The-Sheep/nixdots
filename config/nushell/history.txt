@@ -152,3 +152,31 @@ gs
 ga .
 hx .
 gs
+ga .
+gc "mango cleanup"
+git push
+sudo nixos-rebuild switch --flake .#homie
+gs
+sudo reboot now
+cd nixdots/
+cd config/mango/
+hx .
+./autostart.sh
+chmod +x autostart.sh
+./autostart.sh
+e
+ie
+gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'   
+nix-shell -p glib
+cd nixdots/
+ls
+cd config/
+cd mango/
+hx .
+gs
+ga .
+sudo nixos-rebuild switch --flake .#homie
+hx .
+cd ...
+hx .
+gs
