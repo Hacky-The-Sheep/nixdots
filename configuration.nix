@@ -31,10 +31,11 @@
       enable = true;
       pulse.enable = true;
     };
-    openssh.enable = true;
+    flatpak.enable = true;
     gvfs.enable = true;
     libinput.enable = true;
     mullvad-vpn.enable = true;
+    openssh.enable = true;
     resolved.enable = true;
     tailscale.enable = true;
   };
@@ -81,6 +82,7 @@
       usbutils
 
       ## CLI Tools
+      btop
       fd
       ffmpeg
       ffuf
