@@ -128,5 +128,36 @@
   "disk": {
     "interval": 30,
     "format": "  {free} Free / {total}"
-  }
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "tooltip": true,
+    "format-muted": "󰝟 Muted",
+    "on-scroll-up": "amixer -D pipewire sset Master 5%+",
+    "on-scroll-down": "amixer -D pipewire sset Master 5%-",
+    "on-click": "amixer set Master toggle",
+    "scroll-step": 5,
+    "format-icons": {
+      "headphone": " ",
+      "hands-free": " ",
+      "headset": " ",
+      "phone": " ",
+      "portable": " ",
+      "car": " ",
+      "default": [
+        " ",
+        " ",
+        " "
+      ]
+    }
+  },
+  "pulseaudio#microphone": {
+    "format": "{format_source}",
+    "format-source": " {volume}%",
+    "format-source-muted": " Muted",
+    "on-scroll-up": "amixer -D pipewire sset Capture 5%+",
+    "on-scroll-down": "amixer -D pipewire sset Capture 5%-",
+    "on-click": "amixer set Capture toggle",
+    "scroll-step": 5
+  },
 }

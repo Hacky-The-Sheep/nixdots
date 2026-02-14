@@ -104,6 +104,7 @@
       wireshark
 
       ## WM Tools
+      alsa-utils
       brightnessctl
       dunst
       grim
