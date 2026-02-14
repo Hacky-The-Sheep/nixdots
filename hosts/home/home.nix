@@ -64,6 +64,10 @@
       source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/ghostty/";
       recursive = true;
     };
+    "alacritty" = {
+      source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/alacritty/";
+      recursive = true;
+    };
     "mango" = {
       source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/mango/";
       recursive = true;

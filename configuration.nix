@@ -20,11 +20,13 @@
   networking = {
     hostName = "homie";
     networkmanager.enable = true;
+    firewall.trustedInterfaces = ["tailscale0"];
   };
 
   time.timeZone = "America/Chicago";
 
   services = {
+    displayManager.ly.enable = true;
     pipewire = {
       enable = true;
       pulse.enable = true;
@@ -34,6 +36,7 @@
     libinput.enable = true;
     mullvad-vpn.enable = true;
     resolved.enable = true;
+    tailscale.enable = true;
   };
 
   security = {
@@ -64,6 +67,7 @@
   environment.systemPackages =
     (with pkgs; [
       ## General
+      alacritty
       ghostty
       helix
       mullvad-vpn
@@ -110,6 +114,10 @@
 
       ## Entertainment
       kdePackages.kdenlive
+      material-cursors
+      fluent-icon-theme
+      reversal-icon-theme
+      tela-icon-theme
 
       ## GUI Tools
       gvfs
@@ -142,6 +150,7 @@
       remmina
       sshs
       syncthing
+      tailscale
     ]);
 
   fonts.packages = with pkgs; [

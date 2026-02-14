@@ -1,0 +1,16 @@
+general.import = [
+  "catppuccin-mocha.toml"
+]
+
+[window]
+opacity = 0.8
+padding.x = 10
+padding.y = 10
+
+[font]
+normal.family = "Iosevka"
+bold.family = "Iosevka"
+italic.family = "Iosevka"
+bold_italic.family = "Iosevka"
+
+size = 16.0
