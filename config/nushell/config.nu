@@ -67,6 +67,7 @@ def os_icon [] {
 
     match $os {
         "arch linux"   => "󰣇 "
+        "nixos" => " "
         _         => "󰠗 "
     }
 }
