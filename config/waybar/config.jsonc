@@ -10,6 +10,10 @@
     "network",
     "custom/sep",
     "cpu",
+    "custom/sep",
+    "memory",
+    "custom/sep",
+    "clock",
     "custom/sep"
   ],
   "ext/workspaces": {
@@ -25,19 +29,9 @@
     "on-click": "networkmanager_dmenu"
   },
   "cpu": {
-    "interval": 1,
-    "format": "{icon0}{icon1}{icon2}{icon3} {usage:>2}%   ",
-    "format-icons": [
-      "▁",
-      "▂",
-      "▃",
-      "▄",
-      "▅",
-      "▆",
-      "▇",
-      "█"
-    ],
-    "on-click": "ghostty -e btop"
+    "format": "CPU: {usage}%",
+    "on-click": "ghostty -e btop",
+    "tooltip": false
   },
   "custom/sep": {
     "format": "|",
@@ -60,5 +54,11 @@
       "Rofi",
       "wofi"
     ]
+  },
+  "clock": {
+    "format-alt": "{:%m-%d-%Y}"
+  },
+  "memory": {
+    "format": "Mem: {used}GiB"
   }
 }
