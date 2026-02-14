@@ -27,7 +27,8 @@
 
 #network {
   color: #eba0ac;
-  margin-right: 10px;
+  margin-left: 4px;
+  margin-right: 4px;
 }
 
 window#waybar {

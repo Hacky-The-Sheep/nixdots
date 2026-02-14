@@ -104,9 +104,11 @@
       wireshark
 
       ## WM Tools
+      brightnessctl
       dunst
       grim
       hyprlock
+      networkmanager_dmenu
       rofi
       slurp
       swww
