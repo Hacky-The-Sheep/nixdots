@@ -1,0 +1,132 @@
+{
+  "reload_style_on_change": true,
+  "layer": "top",
+  "position": "top",
+  "spacing": 0,
+  "height": 35,
+  "modules-left": [
+    "user",
+    "cpu",
+    "memory"
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "network",
+    "bluetooth",
+    "battery",
+    "pulseaudio",
+    "pulseaudio#microphone",
+    "tray"
+  ],
+  "user": {
+    "format": "  hacky ",
+    "spacing ": 6,
+    "icon": true,
+    "avatar": "/home/hacky/Pictures/Icons/archlinux-icon.svg",
+    "on-click": "ghostty -e /home/hacky/.config/waybar/wall.sh"
+  },
+  "cpu": {
+    "interval": 1,
+    "format": "{icon0}{icon1}{icon2}{icon3} {usage:>2}%   ",
+    "format-icons": [
+      "▁",
+      "▂",
+      "▃",
+      "▄",
+      "▅",
+      "▆",
+      "▇",
+      "█"
+    ],
+    "on-click": "ghostty -e btop"
+  },
+  "clock": {
+    "format": "{:%I:%M:%S    %b %e, %Y}",
+    "interval": 1
+  },
+  "network": {
+    "format": "{ifname}",
+    "format-wifi": "{essid} - {ipaddr}/{cidr}",
+    "format-ethernet": "{ipaddr}/{cidr}",
+    "on-click": "networkmanager_dmenu"
+  },
+  "battery": {
+    "states": {
+      "good": 100,
+      "warning": 30,
+      "critical": 20
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": "  {capacity}%",
+    "format-plugged": "  {capacity}%",
+    "format-icons": [
+      "☠️",
+      "😰",
+      "😓",
+      "😟",
+      "😓",
+      "🫣",
+      "😶",
+      "😐",
+      "🙂",
+      "😃",
+      "😁"
+    ]
+  },
+  "bluetooth": {
+    "format": "",
+    "format-disabled": "󰂲",
+    "format-connected": "",
+    "tooltip-format": "Devices connected: {num_connections}",
+    "on-click": "blueman-manager"
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "tooltip": true,
+    "format-muted": "󰝟 Muted",
+    "on-scroll-up": "amixer -D pipewire sset Master 5%+",
+    "on-scroll-down": "amixer -D pipewire sset Master 5%-",
+    "on-click": "amixer set Master toggle",
+    "scroll-step": 5,
+    "format-icons": {
+      "headphone": " ",
+      "hands-free": " ",
+      "headset": " ",
+      "phone": " ",
+      "portable": " ",
+      "car": " ",
+      "default": [
+        " ",
+        " ",
+        " "
+      ]
+    }
+  },
+  "pulseaudio#microphone": {
+    "format": "{format_source}",
+    "format-source": " {volume}%",
+    "format-source-muted": " Muted",
+    "on-scroll-up": "amixer -D pipewire sset Capture 5%+",
+    "on-scroll-down": "amixer -D pipewire sset Capture 5%-",
+    "on-click": "amixer set Capture toggle",
+    "scroll-step": 5
+  },
+  "custom/expand-icon": {
+    "format": " ",
+    "tooltip": false
+  },
+  "memory": {
+    "interval": 1,
+    "format": "  {used} Gb"
+  },
+  "tray": {
+    "icon-size": 12,
+    "spacing": 12
+  },
+  "disk": {
+    "interval": 30,
+    "format": "  {free} Free / {total}"
+  }
+}

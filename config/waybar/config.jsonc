@@ -1,0 +1,45 @@
+{
+  "modules-left": [
+    "ext/workspaces"
+    //"dwl/tags",
+    // "dwl/window"
+  ],
+  "modules-right": [
+    "custom/sep",
+    "network",
+    "custom/sep",
+    "cpu",
+    "custom/sep"
+  ],
+  "ext/workspaces": {
+    "format": "{icon}",
+    "ignore-hidden": false,
+    "on-click": "activate",
+    "sort-by-id": true
+  },
+  "network": {
+    "format": "{ifname}",
+    "format-wifi": "{essid} - {ipaddr}/{cidr}",
+    "format-ethernet": "{ipaddr}/{cidr}",
+    "on-click": "networkmanager_dmenu"
+  },
+  "cpu": {
+    "interval": 1,
+    "format": "{icon0}{icon1}{icon2}{icon3} {usage:>2}%   ",
+    "format-icons": [
+      "▁",
+      "▂",
+      "▃",
+      "▄",
+      "▅",
+      "▆",
+      "▇",
+      "█"
+    ],
+    "on-click": "ghostty -e btop"
+  },
+  "custom/sep": {
+    "format": "|",
+    "interval": 0
+  }
+}

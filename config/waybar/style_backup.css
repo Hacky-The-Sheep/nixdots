@@ -1,0 +1,106 @@
+  * {
+    border: none;
+    border-radius: 0;
+    font-family: "Iosevka";
+    font-weight: bold;
+    font-size: 16px;
+    min-height: 0;
+  }
+
+  #window,
+  #picture,
+  #clock,
+  #battery,
+  #pulseaudio,
+  #network,
+  #bluetooth,
+  #workspaces,
+  #tray,
+  #memory,
+  #disk,
+  #cpu,
+  #user,
+  window#waybar {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    box-shadow: none;
+  }
+
+
+  .modules-left {
+    background-color: #11111b;
+    border-radius: 10px 10px 10px 10px;
+    border-style: solid;
+    border-width: 0px;
+    color: #fab387;
+    margin-left: 6px;
+    margin-right: 6px;
+    margin-top: 2px;
+    padding: 4px 6px 0 6px;
+  }
+
+  #user {
+    margin-right: 4px;
+  }
+
+  #disk {
+    margin-left: 4px;
+    margin-right: 4px;
+    color: #89b4fa;
+  }
+
+  #cpu {
+    margin-left: 4px;
+    margin-right: 4px;
+    color: #89b4fa;
+  }
+
+
+  .modules-center {
+    background-color: #11111b;
+    border-radius: 10px 10px 10px 10px;
+    border-width: 0px;
+    color: #f9e2af;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-top: 2px;
+    padding: 4px 4px 0 4px;
+  }
+
+  #clock {
+    color: #f5e0dc;
+  }
+
+  .modules-right {
+    background-color: #11111b;
+    border-radius: 10px 10px 10px 10px;
+    border-width: 0px;
+    color: #f9e2af;
+    margin-left: 6px;
+    margin-right: 6px;
+    margin-top: 2px;
+    padding: 6px 6px 6px 6px;
+  }
+
+  #network {
+    color: #eba0ac;
+    margin-right: 10px;
+  }
+
+  #bluetooth {
+    color: #89b4fa;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  #battery {
+    color: #89b4fa;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  #pulseaudio {
+    color: #89b4fa;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
