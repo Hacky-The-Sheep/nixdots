@@ -130,3 +130,25 @@ sudo nixos-rebuild switch --flake .#homie
 gs
 ga .
 gs
+ga .
+gs
+gc "lots of changes. Nix from scratch"
+git push
+gs
+hx .gitignore
+gs
+ga .
+gs
+nix-shell -p gitui
+gs
+ga .
+gs
+hx .
+ls
+hx .gitignore
+cd config/
+hx .
+gs
+ga .
+hx .
+gs
