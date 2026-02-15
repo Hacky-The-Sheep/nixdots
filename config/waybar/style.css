@@ -2,12 +2,28 @@
   border: none;
   border-radius: 0;
   font-family: Iosevka;
-  font-size: 14px;
+  font-weight: bold;
+  font-size: 16px;
   min-height: 0;
 }
 
+#window,
+#picture,
+#clock,
+#battery,
+#pulseaudio,
+#network,
+#bluetooth,
+#workspaces,
+#tray,
+#memory,
+#cpu,
+#user,
 window#waybar {
-  border-radius: 10;
+  /* background-color: rgba(0, 0, 0, 0); */
+  border: none;
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: none;
 }
 
 #cpu {
@@ -24,7 +40,7 @@ window#waybar {
 
 #clock {
   margin-left: 4px;
-  margin-right: 4px;
+  margin-right: 8px;
   color: #fab387;
 }
 
@@ -74,4 +90,29 @@ window#waybar {
   margin-left: 4px;
   margin-right: 4px;
   color: #89b4fa;
+}
+
+#tags {
+  background-color: transparent;
+  margin-left: 0px;
+  border-radius: 4px;
+}
+
+#tags button {
+  padding: 0 6px;
+  background-color: transparent;
+  color: #cdd6f4;
+  border-radius: 0;
+  min-width: 12px;
+}
+
+#tags button.focused {
+  background-color: #89b4fa;
+  color: #ffffff;
+  /* font-weight: 900; */
+}
+
+#tags button:first-child {
+  border-radius: 10px 0 0 10px;
+  margin-left: 0;
 }

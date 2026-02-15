@@ -2,13 +2,13 @@
   "layer": "top",
   "position": "top",
   "height": 32,
-  "spacing": 0,
-  "margin": "5 6 5 6",
-  "reload_style_on_change": true,
+  // "spacing": 0,
+  "margin": "10 6 10 6",
+  // "reload_style_on_change": true,
   "modules-left": [
-    "ext/workspaces",
-    // "dwl/tags",
-    "wlr/taskbar",
+    // "ext/workspaces",
+    "dwl/tags",
+    // "wlr/taskbar",
     "dwl/window"
   ],
   "modules-right": [
@@ -51,19 +51,19 @@
     // "on-click": "bash ~/.config/mango/screenshot.sh"
     // "max-length": 50
   },
-  "wlr/taskbar": {
-    "format": "{icon}",
-    "icon-size": 20,
-    "all-outputs": false,
-    "tooltip-format": "{title}",
-    "markup": true,
-    "on-click": "activate",
-    "on-click-right": "close",
-    "ignore-list": [
-      "Rofi",
-      "wofi"
-    ]
-  },
+  // "wlr/taskbar": {
+  //   "format": "{icon}",
+  //   "icon-size": 20,
+  //   "all-outputs": false,
+  //   "tooltip-format": "{title}",
+  //   "markup": true,
+  //   "on-click": "activate",
+  //   "on-click-right": "close",
+  //   "ignore-list": [
+  //     "Rofi",
+  //     "wofi"
+  //   ]
+  // },
   "clock": {
     "format": "{:%I:%M:%S}",
     "interval": 1
