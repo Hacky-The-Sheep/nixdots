@@ -3,6 +3,10 @@
   pkgs,
   ...
 }: {
+  imports = [
+    ../../system/ssh.nix
+  ];
+
   home = {
     username = "hacky";
     homeDirectory = "/home/hacky";
