@@ -1,11 +1,14 @@
 * {
   border: none;
   border-radius: 0;
-  font-family: monospace;
+  font-family: Iosevka;
   font-size: 14px;
   min-height: 0;
 }
 
+window#waybar {
+  border-radius: 10;
+}
 
 #cpu {
   margin-left: 4px;

@@ -25,8 +25,10 @@
   programs = {
     git = {
       enable = true;
-      userName = "hacky";
-      userEmail = "jon.nguyen7@protonmail.com";
+      settings = {
+        user.name = "hacky";
+        user.email = "jon.nguyen7@protonmail.com";
+      };
     };
     home-manager.enable = true;
   };
@@ -70,10 +72,6 @@
     };
     "dunst" = {
       source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/dunst/";
-      recursive = true;
-    };
-    "alacritty" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/alacritty/";
       recursive = true;
     };
     "mango" = {

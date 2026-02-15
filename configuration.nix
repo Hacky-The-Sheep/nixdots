@@ -69,7 +69,6 @@
   environment.systemPackages =
     (with pkgs; [
       ## General
-      alacritty
       ghostty
       helix
       mullvad-vpn
