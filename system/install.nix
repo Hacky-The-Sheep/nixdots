@@ -1,7 +1,7 @@
 {
   imports = [
     ./printers.nix
-    # ./ssh.nix
+    ./ssh.nix
     ./udev.nix
   ];
 }
