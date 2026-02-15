@@ -1,6 +1,7 @@
 {
   pkgs,
   pkgs-unstable,
+  hostname,
   ...
 }: {
   imports = [
@@ -18,7 +19,7 @@
   };
 
   networking = {
-    hostName = "homie";
+    hostName = hostname;
     networkmanager.enable = true;
     firewall.trustedInterfaces = ["tailscale0"];
   };
