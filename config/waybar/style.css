@@ -68,5 +68,7 @@ window#waybar {
 }
 
 #pulseaudio {
+  margin-left: 4px;
+  margin-right: 4px;
   color: #89b4fa;
 }
