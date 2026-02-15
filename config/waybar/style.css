@@ -66,3 +66,7 @@ window#waybar {
 #custom-sep {
   color: #f2cdcd;
 }
+
+#pulseaudio {
+  color: #89b4fa;
+}
