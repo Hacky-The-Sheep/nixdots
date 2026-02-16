@@ -62,20 +62,20 @@
   ];
 
   xdg.configFile = {
-    "helix" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/helix/";
-      recursive = true;
-    };
-    "ghostty" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/ghostty/";
-      recursive = true;
-    };
     "btop" = {
       source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/btop/";
       recursive = true;
     };
     "dunst" = {
       source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/dunst/";
+      recursive = true;
+    };
+    "ghostty" = {
+      source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/ghostty/";
+      recursive = true;
+    };
+    "helix" = {
+      source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/helix/";
       recursive = true;
     };
     "mango" = {
@@ -96,6 +96,10 @@
     };
     "hypr" = {
       source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/hypr/";
+      recursive = true;
+    };
+    "foot" = {
+      source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/foot/";
       recursive = true;
     };
   };
