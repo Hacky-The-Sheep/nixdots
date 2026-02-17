@@ -142,6 +142,8 @@
       nixd
       nixfmt
       openssl
+      python315
+      rustfmt
       rust-analyzer
       rustc
       vscode-langservers-extracted # Includes HTML/CSS/JSON/ESLINT
