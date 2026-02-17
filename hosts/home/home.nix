@@ -79,7 +79,7 @@
       recursive = true;
     };
     "mango" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/mango/";
+      source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/hosts/home/mango/";
       recursive = true;
     };
     "nushell" = {
