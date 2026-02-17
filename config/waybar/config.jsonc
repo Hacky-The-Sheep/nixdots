@@ -65,7 +65,8 @@
   //   ]
   // },
   "clock": {
-    "format": "{:%I:%M:%S}",
+    // "format": "{:%I:%M:%S}"
+    "format": "{:%I:%M:%S    %b %e, %Y}",
     "interval": 1
   },
   "memory": {
