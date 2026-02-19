@@ -62,6 +62,7 @@
   };
 
   programs = {
+    hyprland.enable = true;
     mango.enable = true;
     dconf.enable = true;
   };

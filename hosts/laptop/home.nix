@@ -5,6 +5,7 @@
 }: {
   imports = [
     ../../system/ssh.nix
+    ../../hosts/laptop/hyprmonitor.nix
   ];
 
   home = {

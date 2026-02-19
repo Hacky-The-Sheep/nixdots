@@ -85,6 +85,7 @@
                 imports = [
                   catppuccin.homeModules.catppuccin
                   ./hosts/laptop/home.nix
+                  # ./hosts/laptop/hyprmonitor.nix
                 ];
               };
             };
