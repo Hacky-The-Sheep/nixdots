@@ -69,7 +69,6 @@
   environment.systemPackages =
     (with pkgs; [
       ## General
-      foot
       ghostty
       helix
       mullvad-vpn
