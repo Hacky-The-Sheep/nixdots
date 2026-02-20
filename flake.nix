@@ -66,6 +66,37 @@
         ];
       };
 
+      ## work
+      work = lib.nixosSystem {
+        specialArgs = {
+          inherit inputs;
+          inherit pkgs-unstable;
+          inherit system;
+          hostname = "work";
+        };
+        modules = [
+          ./configuration.nix
+          ./noctalia.nix
+          catppuccin.nixosModules.catppuccin
+          ./hosts/home/hardware-configuration.nix
+          mangowc.nixosModules.mango
+          home-manager.nixosModules.home-manager
+          {
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              backupFileExtension = "backup";
+              users.hacky = {
+                imports = [
+                  catppuccin.homeModules.catppuccin
+                  ./hosts/work/home.nix
+                ];
+              };
+            };
+          }
+        ];
+      };
+
       ## Framework
       fwork = lib.nixosSystem {
         specialArgs = {
@@ -76,6 +107,7 @@
         };
         modules = [
           ./configuration.nix
+          ./noctalia.nix
           catppuccin.nixosModules.catppuccin
           ./hosts/laptop/hardware-configuration.nix
           nixos-hardware.nixosModules.framework-16-7040-amd
@@ -90,7 +122,6 @@
                 imports = [
                   catppuccin.homeModules.catppuccin
                   ./hosts/laptop/home.nix
-                  # ./hosts/laptop/hyprmonitor.nix
                 ];
               };
             };
