@@ -109,11 +109,12 @@
       dunst
       grim
       networkmanager_dmenu
-      rofi
+      # rofi
       slurp
       swww
       waybar
       wl-clipboard
+      wofi
       xdg-desktop-portal-wlr
 
       ## Entertainment
