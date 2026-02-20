@@ -1,8 +1,9 @@
-waybar &
+noctalia-shell --no-duplicate &
+# waybar &
 /run/current-system/sw/bin/soteria &
-swww-daemon &
+# swww-daemon &
 syncthing &
-dunst &
+# dunst &
 NetworkManager &
 gnome-keyring-daemon --start --components=secrets &
 dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"

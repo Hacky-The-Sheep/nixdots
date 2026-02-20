@@ -62,7 +62,6 @@
   };
 
   programs = {
-    hyprland.enable = true;
     mango.enable = true;
     dconf.enable = true;
   };
@@ -110,7 +109,6 @@
       brightnessctl
       dunst
       grim
-      hyprlock
       networkmanager_dmenu
       rofi
       slurp

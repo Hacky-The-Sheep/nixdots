@@ -12,6 +12,10 @@
       url = "github:DreamMaoMao/mango";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
+    noctalia = {
+      url = "github:noctalia-dev/noctalia-shell";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
   };
 
   outputs = {
@@ -41,6 +45,7 @@
         };
         modules = [
           ./configuration.nix
+          ./noctalia.nix
           catppuccin.nixosModules.catppuccin
           ./hosts/home/hardware-configuration.nix
           mangowc.nixosModules.mango
