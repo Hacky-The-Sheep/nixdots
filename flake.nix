@@ -72,13 +72,13 @@
           inherit inputs;
           inherit pkgs-unstable;
           inherit system;
-          hostname = "work";
+          hostname = "workerbee";
         };
         modules = [
           ./configuration.nix
           ./noctalia.nix
           catppuccin.nixosModules.catppuccin
-          ./hosts/home/hardware-configuration.nix
+          ./hosts/work/hardware-configuration.nix
           mangowc.nixosModules.mango
           home-manager.nixosModules.home-manager
           {
