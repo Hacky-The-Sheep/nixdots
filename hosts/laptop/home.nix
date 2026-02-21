@@ -99,8 +99,8 @@
       source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/hypr/";
       recursive = true;
     };
-    "foot" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/foot/";
+    "noctalia" = {
+      source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/noctalia/";
       recursive = true;
     };
   };
