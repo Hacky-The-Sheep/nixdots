@@ -27,12 +27,12 @@
   time.timeZone = "America/Chicago";
 
   services = {
-    displayManager.ly.enable = true;
+    # displayManager.ly.enable = true;
     pipewire = {
       enable = true;
       pulse.enable = true;
     };
-    flatpak.enable = true;
+    # flatpak.enable = true;
     gvfs.enable = true;
     libinput.enable = true;
     mullvad-vpn.enable = true;
@@ -62,6 +62,7 @@
   };
 
   programs = {
+    hyprland.enable = true;
     dconf.enable = true;
   };
 
@@ -79,6 +80,8 @@
       ntfs3g
       pulseaudio
       usbutils
+      grim
+      slurp
 
       ## CLI Tools
       btop
@@ -108,12 +111,11 @@
       dunst
       grim
       networkmanager_dmenu
-      # rofi
+      rofi
       slurp
       swww
       waybar
       wl-clipboard
-      wofi
       xdg-desktop-portal-wlr
 
       ## Entertainment
@@ -152,6 +154,7 @@
       dnsutils
       hyprlock
       powershell
+      kdePackages.kwallet
       qbittorrent
       remmina
       sshs
@@ -177,9 +180,13 @@
   };
   system.stateVersion = "25.11";
 
-  # The Cat
   catppuccin = {
     enable = true;
     accent = "peach";
+    cursors = {
+      accent = "blue";
+      enable = true;
+      flavor = "mocha";
+    };
   };
 }

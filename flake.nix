@@ -3,17 +3,17 @@
     nixpkgs.url = "nixpkgs/nixos-25.11";
     nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
-    catppuccin.url = "github:catppuccin/nix";
+    catppuccin.url = "github:catppuccin/nix/release-25.11";
     home-manager = {
       url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    mangowc = {
-      url = "github:DreamMaoMao/mango";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
-    };
     noctalia = {
       url = "github:noctalia-dev/noctalia-shell";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
+    hyprland = {
+      url = "github:/hyprwm/Hyprland";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
   };
@@ -21,7 +21,7 @@
   outputs = {
     catppuccin,
     home-manager,
-    mangowc,
+    hyprland,
     nixos-hardware,
     nixpkgs,
     nixpkgs-unstable,
@@ -48,7 +48,6 @@
           ./noctalia.nix
           catppuccin.nixosModules.catppuccin
           ./hosts/home/hardware-configuration.nix
-          mangowc.nixosModules.mango
           home-manager.nixosModules.home-manager
           {
             home-manager = {
@@ -79,8 +78,9 @@
           ./noctalia.nix
           catppuccin.nixosModules.catppuccin
           ./hosts/work/hardware-configuration.nix
-          mangowc.nixosModules.mango
+          ./gpu/amd.nix
           home-manager.nixosModules.home-manager
+          hyprland.nixosModules.default
           {
             home-manager = {
               useGlobalPkgs = true;
@@ -111,7 +111,6 @@
           catppuccin.nixosModules.catppuccin
           ./hosts/laptop/hardware-configuration.nix
           nixos-hardware.nixosModules.framework-16-7040-amd
-          mangowc.nixosModules.mango
           home-manager.nixosModules.home-manager
           {
             home-manager = {
