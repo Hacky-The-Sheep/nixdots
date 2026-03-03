@@ -177,4 +177,10 @@
     };
   };
   system.stateVersion = "25.11";
+
+  # The Cat
+  catppuccin = {
+    enable = true;
+    accent = "peach";
+  };
 }
