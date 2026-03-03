@@ -153,6 +153,7 @@
       brave
       dnsutils
       hyprlock
+      microsoft-edge
       powershell
       kdePackages.kwallet
       qbittorrent
