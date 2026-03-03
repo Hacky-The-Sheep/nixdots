@@ -62,7 +62,6 @@
   };
 
   programs = {
-    mango.enable = true;
     dconf.enable = true;
   };
 

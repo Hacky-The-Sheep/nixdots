@@ -79,10 +79,6 @@
       source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/helix/";
       recursive = true;
     };
-    "mango" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/hosts/laptop/mango/";
-      recursive = true;
-    };
     "nushell" = {
       source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/nushell/";
       recursive = true;
