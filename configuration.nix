@@ -103,6 +103,7 @@
 
       ## Work
       libreoffice
+      microsoft-edge
       wireshark
 
       ## WM Tools
@@ -153,7 +154,6 @@
       brave
       dnsutils
       hyprlock
-      microsoft-edge
       powershell
       kdePackages.kwallet
       qbittorrent
@@ -190,4 +190,6 @@
       flavor = "mocha";
     };
   };
+
+  nixpkgs.config.allowUnfree = true;
 }
