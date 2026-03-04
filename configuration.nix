@@ -85,6 +85,7 @@
 
       ## CLI Tools
       btop
+      fastfetch
       fd
       ffmpeg
       ffuf

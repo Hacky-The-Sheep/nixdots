@@ -72,6 +72,10 @@
       source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/ghostty/";
       recursive = true;
     };
+    "fastfetch" = {
+      source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/fastfetch/";
+      recursive = true;
+    };
     "noctalia" = {
       source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/noctalia/";
       recursive = true;
