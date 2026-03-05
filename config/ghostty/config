@@ -1,7 +1,7 @@
 window-save-state = always
 
 # Rice
-background-opacity = 0.9
+background-opacity = 0.6
 background-blur = true
 background-blur-radius = 45
 
