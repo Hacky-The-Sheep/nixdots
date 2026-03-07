@@ -4,8 +4,11 @@
   ...
 }: {
   imports = [
-    ../../system/ssh.nix
+    ../../apps/install.nix
     ../../hosts/laptop/hyprmonitor.nix
+    ../../system/ssh.nix
+    ../../wm/hyprland.nix
+    ../../wm/hyprlock.nix
   ];
 
   home = {
@@ -89,10 +92,6 @@
     };
     "waybar" = {
       source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/waybar/";
-      recursive = true;
-    };
-    "hypr" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/hypr/";
       recursive = true;
     };
     "noctalia" = {

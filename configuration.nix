@@ -113,7 +113,7 @@
       dunst
       grim
       networkmanager_dmenu
-      rofi
+      # rofi
       slurp
       swww
       waybar
@@ -154,7 +154,7 @@
     ++ (with pkgs-unstable; [
       brave
       dnsutils
-      hyprlock
+      # hyprlock
       powershell
       kdePackages.kwallet
       qbittorrent

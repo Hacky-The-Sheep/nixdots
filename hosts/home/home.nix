@@ -5,6 +5,10 @@
 }: {
   imports = [
     ../../system/ssh.nix
+    ../../apps/install.nix
+    ../../wm/hyprland.nix
+    ../../wm/hyprlock.nix
+    ../../hosts/home/hyprmonitor.nix
   ];
 
   home = {
@@ -86,17 +90,17 @@
       source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/nushell/";
       recursive = true;
     };
-    "rofi" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/rofi/";
-      recursive = true;
-    };
+    # "rofi" = {
+    #   source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/rofi/";
+    #   recursive = true;
+    # };
     "waybar" = {
       source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/waybar/";
       recursive = true;
     };
-    "hypr" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/hypr/";
-      recursive = true;
-    };
+    # "hypr" = {
+    #   source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/hypr/";
+    #   recursive = true;
+    # };
   };
 }

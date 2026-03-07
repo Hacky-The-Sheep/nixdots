@@ -49,6 +49,7 @@
           catppuccin.nixosModules.catppuccin
           ./hosts/home/hardware-configuration.nix
           home-manager.nixosModules.home-manager
+          hyprland.nixosModules.default
           {
             home-manager = {
               useGlobalPkgs = true;
