@@ -27,12 +27,10 @@
   time.timeZone = "America/Chicago";
 
   services = {
-    # displayManager.ly.enable = true;
     pipewire = {
       enable = true;
       pulse.enable = true;
     };
-    # flatpak.enable = true;
     gvfs.enable = true;
     libinput.enable = true;
     mullvad-vpn.enable = true;
@@ -69,7 +67,6 @@
   environment.systemPackages =
     (with pkgs; [
       ## General
-      ghostty
       helix
       mullvad-vpn
       signal-desktop-bin
@@ -154,7 +151,6 @@
     ++ (with pkgs-unstable; [
       brave
       dnsutils
-      # hyprlock
       powershell
       kdePackages.kwallet
       qbittorrent

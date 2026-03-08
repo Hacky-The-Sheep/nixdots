@@ -70,10 +70,6 @@
       source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/dunst/";
       recursive = true;
     };
-    "ghostty" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/ghostty/";
-      recursive = true;
-    };
     "noctalia" = {
       source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/noctalia/";
       recursive = true;
