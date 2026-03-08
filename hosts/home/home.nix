@@ -66,10 +66,6 @@
   ];
 
   xdg.configFile = {
-    "dunst" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/dunst/";
-      recursive = true;
-    };
     "noctalia" = {
       source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/noctalia/";
       recursive = true;
@@ -82,17 +78,5 @@
       source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/nushell/";
       recursive = true;
     };
-    # "rofi" = {
-    #   source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/rofi/";
-    #   recursive = true;
-    # };
-    "waybar" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/waybar/";
-      recursive = true;
-    };
-    # "hypr" = {
-    #   source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/hypr/";
-    #   recursive = true;
-    # };
   };
 }

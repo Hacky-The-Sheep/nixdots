@@ -3,8 +3,9 @@
     enable = true;
     settings = {
       # Rice
-      background-opacity = 0.85;
-      background-blur-radius = 60;
+      background-opacity = 0.6;
+      background-blur = true;
+      background-blur-radius = 45;
 
       # Title
       title = "󰮯 󰇘 󰊠 󰇘 󱙝 󰇘 ";
