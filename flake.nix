@@ -113,6 +113,7 @@
           ./hosts/laptop/hardware-configuration.nix
           nixos-hardware.nixosModules.framework-16-7040-amd
           home-manager.nixosModules.home-manager
+          hyprland.nixosModules.default
           {
             home-manager = {
               useGlobalPkgs = true;

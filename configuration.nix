@@ -84,7 +84,7 @@
       slurp
 
       ## CLI Tools
-      btop
+      # btop
       fastfetch
       fd
       ffmpeg

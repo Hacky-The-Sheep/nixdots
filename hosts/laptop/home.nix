@@ -66,10 +66,6 @@
   ];
 
   xdg.configFile = {
-    "btop" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/btop/";
-      recursive = true;
-    };
     "dunst" = {
       source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/dunst/";
       recursive = true;
