@@ -21,27 +21,27 @@
         vignette_intensity = 0.5;
       };
 
-      input-field = {
-        size = "250, 60";
-        outline_thickness = 2;
-        dots_size = 0.2;
-        dots_spacing = 0.2;
-        dots_center = true;
-        outer_color = "rgb(180, 190, 254)";
-        inner_color = "rgb(30, 30, 46)";
-        font_color = "rgb(205, 214, 244)";
-        fade_on_empty = true;
-        placeholder_text = "<i>Password...</i>";
-        hide_input = false;
-        position = "0, -20";
-        halign = "center";
-        valign = "center";
+      # input-field = {
+      #   size = "250, 60";
+      #   outline_thickness = 2;
+      #   dots_size = 0.2;
+      #   dots_spacing = 0.2;
+      #   dots_center = true;
+      #   outer_color = "rgb(180, 190, 254)";
+      #   inner_color = "rgb(30, 30, 46)";
+      #   font_color = "rgb(205, 214, 244)";
+      #   fade_on_empty = true;
+      #   placeholder_text = "<i>Password...</i>";
+      #   hide_input = false;
+      #   position = "0, -20";
+      #   halign = "center";
+      #   valign = "center";
 
-        check_color = "rgb(249, 226, 175)";
-        fail_color = "rgb(243, 139, 168)";
-        fail_text = "<i>$FAIL <b>($ATTEMPTS)</b></i>";
-        capslock_color = "rgb(250, 179, 135)";
-      };
+      #   check_color = "rgb(249, 226, 175)";
+      #   fail_color = "rgb(243, 139, 168)";
+      #   fail_text = "<i>$FAIL <b>($ATTEMPTS)</b></i>";
+      #   capslock_color = "rgb(250, 179, 135)";
+      # };
 
       label = {
         text = "$TIME";

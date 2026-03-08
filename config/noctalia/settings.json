@@ -152,9 +152,9 @@
                 },
                 {
                     "deviceNativePath": "__default__",
-                    "displayMode": "onhover",
+                    "displayMode": "graphic",
                     "hideIfIdle": false,
-                    "hideIfNotDetected": true,
+                    "hideIfNotDetected": false,
                     "id": "Battery",
                     "showNoctaliaPerformance": false,
                     "showPowerProfiles": false

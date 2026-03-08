@@ -3,7 +3,8 @@
   pkgs-unstable,
   hostname,
   ...
-}: {
+}:
+{
   imports = [
     ./system/install.nix
   ];
@@ -21,7 +22,7 @@
   networking = {
     hostName = hostname;
     networkmanager.enable = true;
-    firewall.trustedInterfaces = ["tailscale0"];
+    firewall.trustedInterfaces = [ "tailscale0" ];
   };
 
   time.timeZone = "America/Chicago";
@@ -32,6 +33,7 @@
       pulse.enable = true;
     };
     gvfs.enable = true;
+    upower.enable = true;
     libinput.enable = true;
     mullvad-vpn.enable = true;
     openssh.enable = true;
@@ -60,6 +62,7 @@
   };
 
   programs = {
+    niri.enable = true;
     hyprland.enable = true;
     dconf.enable = true;
   };
@@ -115,6 +118,7 @@
       swww
       waybar
       wl-clipboard
+      xwayland-satellite
       xdg-desktop-portal-wlr
 
       ## Entertainment
@@ -170,7 +174,10 @@
   ];
 
   nix = {
-    settings.experimental-features = ["nix-command" "flakes"];
+    settings.experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
     gc = {
       automatic = true;
       dates = "weekly";

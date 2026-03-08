@@ -2,7 +2,8 @@
   config,
   pkgs,
   ...
-}: {
+}:
+{
   imports = [
     ../../system/ssh.nix
     ../../apps/install.nix
@@ -76,6 +77,10 @@
     };
     "helix" = {
       source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/helix/";
+      recursive = true;
+    };
+    "niri" = {
+      source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/niri/";
       recursive = true;
     };
   };

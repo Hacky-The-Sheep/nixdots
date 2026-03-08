@@ -18,117 +18,120 @@
     };
   };
 
-  outputs = {
-    catppuccin,
-    home-manager,
-    hyprland,
-    nixos-hardware,
-    nixpkgs,
-    nixpkgs-unstable,
-    ...
-  } @ inputs: let
-    system = "x86_64-linux";
-    lib = nixpkgs.lib;
-    pkgs-unstable = import nixpkgs-unstable {
+  outputs =
+    {
+      catppuccin,
+      home-manager,
+      hyprland,
+      nixos-hardware,
+      nixpkgs,
+      nixpkgs-unstable,
+      ...
+    }@inputs:
+    let
       system = "x86_64-linux";
-      config.allowUnfree = true;
-    };
-  in {
-    nixosConfigurations = {
-      ## HOME
-      homie = lib.nixosSystem {
-        specialArgs = {
-          inherit inputs;
-          inherit pkgs-unstable;
-          inherit system;
-          hostname = "homie";
-        };
-        modules = [
-          ./configuration.nix
-          ./noctalia.nix
-          catppuccin.nixosModules.catppuccin
-          ./hosts/home/hardware-configuration.nix
-          home-manager.nixosModules.home-manager
-          hyprland.nixosModules.default
-          {
-            home-manager = {
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              backupFileExtension = "backup";
-              users.hacky = {
-                imports = [
-                  catppuccin.homeModules.catppuccin
-                  ./hosts/home/home.nix
-                ];
-              };
-            };
-          }
-        ];
+      lib = nixpkgs.lib;
+      pkgs-unstable = import nixpkgs-unstable {
+        system = "x86_64-linux";
+        config.allowUnfree = true;
       };
+    in
+    {
+      nixosConfigurations = {
+        ## HOME
+        homie = lib.nixosSystem {
+          specialArgs = {
+            inherit inputs;
+            inherit pkgs-unstable;
+            inherit system;
+            hostname = "homie";
+          };
+          modules = [
+            ./configuration.nix
+            ./noctalia.nix
+            catppuccin.nixosModules.catppuccin
+            ./hosts/home/hardware-configuration.nix
+            home-manager.nixosModules.home-manager
+            hyprland.nixosModules.default
+            {
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                backupFileExtension = "backup";
+                users.hacky = {
+                  imports = [
+                    catppuccin.homeModules.catppuccin
+                    ./hosts/home/home.nix
+                  ];
+                };
+              };
+            }
+          ];
+        };
 
-      ## work
-      work = lib.nixosSystem {
-        specialArgs = {
-          inherit inputs;
-          inherit pkgs-unstable;
-          inherit system;
-          hostname = "workerbee";
-        };
-        modules = [
-          ./configuration.nix
-          ./noctalia.nix
-          catppuccin.nixosModules.catppuccin
-          ./hosts/work/hardware-configuration.nix
-          ./gpu/amd.nix
-          home-manager.nixosModules.home-manager
-          hyprland.nixosModules.default
-          {
-            home-manager = {
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              backupFileExtension = "backup";
-              users.hacky = {
-                imports = [
-                  catppuccin.homeModules.catppuccin
-                  ./hosts/work/home.nix
-                ];
+        ## work
+        work = lib.nixosSystem {
+          specialArgs = {
+            inherit inputs;
+            inherit pkgs-unstable;
+            inherit system;
+            hostname = "workerbee";
+          };
+          modules = [
+            ./configuration.nix
+            ./noctalia.nix
+            catppuccin.nixosModules.catppuccin
+            ./hosts/work/hardware-configuration.nix
+            ./gpu/amd.nix
+            home-manager.nixosModules.home-manager
+            hyprland.nixosModules.default
+            {
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                backupFileExtension = "backup";
+                users.hacky = {
+                  imports = [
+                    catppuccin.homeModules.catppuccin
+                    ./hosts/work/home.nix
+                  ];
+                };
               };
-            };
-          }
-        ];
-      };
+            }
+          ];
+        };
 
-      ## Framework
-      fwork = lib.nixosSystem {
-        specialArgs = {
-          inherit inputs;
-          inherit pkgs-unstable;
-          inherit system;
-          hostname = "fWork";
-        };
-        modules = [
-          ./configuration.nix
-          ./noctalia.nix
-          catppuccin.nixosModules.catppuccin
-          ./hosts/laptop/hardware-configuration.nix
-          nixos-hardware.nixosModules.framework-16-7040-amd
-          home-manager.nixosModules.home-manager
-          hyprland.nixosModules.default
-          {
-            home-manager = {
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              backupFileExtension = "backup";
-              users.hacky = {
-                imports = [
-                  catppuccin.homeModules.catppuccin
-                  ./hosts/laptop/home.nix
-                ];
+        ## Framework
+        fwork = lib.nixosSystem {
+          specialArgs = {
+            inherit inputs;
+            inherit pkgs-unstable;
+            inherit system;
+            hostname = "fWork";
+          };
+          modules = [
+            ./configuration.nix
+            ./noctalia.nix
+            catppuccin.nixosModules.catppuccin
+            ./hosts/laptop/hardware-configuration.nix
+            nixos-hardware.nixosModules.framework-16-7040-amd
+            home-manager.nixosModules.home-manager
+            hyprland.nixosModules.default
+            {
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                backupFileExtension = "backup";
+                users.hacky = {
+                  imports = [
+                    catppuccin.homeModules.catppuccin
+                    ./hosts/laptop/home.nix
+                  ];
+                };
               };
-            };
-          }
-        ];
+            }
+          ];
+        };
       };
     };
-  };
 }

@@ -2,7 +2,8 @@
   config,
   pkgs,
   ...
-}: {
+}:
+{
   imports = [
     ../../apps/install.nix
     ../../hosts/laptop/hyprmonitor.nix
@@ -51,6 +52,13 @@
     accent = "peach";
   };
 
+  gtk = {
+    enable = true;
+    colorScheme = "dark";
+    gtk3.extraConfig.gtk-application-prefer-dark-theme = 1;
+    gtk4.extraConfig.gtk-application-prefer-dark-theme = 1;
+  };
+
   home.packages = with pkgs; [
     ## Secrets
     gcr
@@ -68,6 +76,10 @@
   xdg.configFile = {
     "helix" = {
       source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/helix/";
+      recursive = true;
+    };
+    "niri" = {
+      source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/niri/";
       recursive = true;
     };
     "nushell" = {
