@@ -68,10 +68,6 @@
       source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/noctalia/";
       recursive = true;
     };
-    "helix" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/helix/";
-      recursive = true;
-    };
     "nushell" = {
       source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/nushell/";
       recursive = true;
