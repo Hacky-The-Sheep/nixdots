@@ -74,5 +74,9 @@
       source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/nushell/";
       recursive = true;
     };
+    "helix" = {
+      source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/helix/";
+      recursive = true;
+    };
   };
 }

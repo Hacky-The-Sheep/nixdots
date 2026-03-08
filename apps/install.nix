@@ -3,7 +3,7 @@
     ./btop.nix
     ./fastfetch.nix
     ./ghostty.nix
-    ./helix.nix
+    # ./helix.nix
     ./mpv.nix
     ./rofi.nix
   ];

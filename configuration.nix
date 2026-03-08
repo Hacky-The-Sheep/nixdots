@@ -142,6 +142,7 @@
       nixfmt
       openssl
       python315
+      ruff
       rustfmt
       rust-analyzer
       rustc

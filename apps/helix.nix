@@ -84,6 +84,7 @@
           ];
           formatter = {
             command = "ruff";
+            args = ["format" "-"];
           };
           auto-format = true;
         }
