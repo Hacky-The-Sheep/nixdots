@@ -28,6 +28,7 @@
   time.timeZone = "America/Chicago";
 
   services = {
+    flatpak.enable = true;
     pipewire = {
       enable = true;
       pulse.enable = true;
@@ -111,7 +112,6 @@
 
       ## Work
       libreoffice
-      microsoft-edge
       wireshark
 
       ## WM Tools
@@ -142,6 +142,7 @@
 
       ## Coding and Formatters
       alejandra
+      any-nix-shell
       cargo
       clippy
       delve

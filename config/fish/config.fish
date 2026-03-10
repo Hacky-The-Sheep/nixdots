@@ -1,5 +1,6 @@
 starship init fish | source
 set -gx NIX_SHELL_PRESERVE_PROMPT 1
+any-nix-shell fish --info-right | source
 
 # Aliases
 alias ei exit
