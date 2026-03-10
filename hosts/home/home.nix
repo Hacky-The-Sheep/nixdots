@@ -86,6 +86,14 @@
       source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/helix/";
       recursive = true;
     };
+    "fish" = {
+      source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/fish/";
+      recursive = true;
+    };
+    # "starship" = {
+    #   source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/starship/";
+    #   recursive = true;
+    # };
     "niri" = {
       source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/niri/";
       recursive = true;

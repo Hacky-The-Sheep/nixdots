@@ -49,19 +49,21 @@
 
   users.users.hacky = {
     isNormalUser = true;
-    shell = pkgs.nushell;
+    shell = pkgs.fish;
     extraGroups = [
-      "networkmanager"
-      "wheel"
-      "plugdev"
       "dialout"
       "libvirtd"
       "lp"
+      "networkmanager"
+      "optical"
+      "plugdev"
+      "wheel"
     ];
     uid = 1000;
   };
 
   programs = {
+    fish.enable = true;
     niri.enable = true;
     hyprland.enable = true;
     dconf.enable = true;
@@ -71,12 +73,15 @@
     (with pkgs; [
       ## General
       helix
+      makemkv
       mullvad-vpn
       signal-desktop-bin
 
       ## System Tools
       exfat
       git
+      handbrake
+      libdvdcss
       ntfs3g
       pulseaudio
       usbutils
@@ -85,6 +90,7 @@
 
       ## CLI Tools
       # btop
+      eza
       fastfetch
       fd
       ffmpeg
@@ -96,6 +102,7 @@
       ripgrep
       rlwrap
       screen
+      starship
       thc-hydra
       unzip
       wget
@@ -150,6 +157,7 @@
       rustfmt
       rust-analyzer
       rustc
+      taplo
       vscode-langservers-extracted # Includes HTML/CSS/JSON/ESLINT
       yaml-language-server
     ])
