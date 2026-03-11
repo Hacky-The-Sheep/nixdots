@@ -4,19 +4,8 @@ $env.config.show_banner = false
 # Editor
 # $env.EDITOR = "hx"
 
-# Fish Completer
-let fish_completer = {|spans|
-    fish --command $"complete '--do-complete=($spans | str replace --all "'" "\\'" | str join ' ')'"
-    | from tsv --flexible --noheaders --no-infer
-    | rename value description
-    | update value {|row|
-      let value = $row.value
-      let need_quote = ['\' ',' '[' ']' '(' ')' ' ' '\t' "'" '"' "`"] | any {$in in $value}
-      if ($need_quote and ($value | path exists)) {
-        let expanded_path = if ($value starts-with ~) {$value | path expand --no-symlink} else {$value}
-        $'"($expanded_path | str replace --all "\"" "\\\"")"'
-      } else {$value}
-    }
+let carapace_completer = {|spans|
+    carapace $spans.0 nushell ...$spans | from json
 }
 
 # ALIASES
@@ -67,6 +56,7 @@ $env.config = ($env.config | merge {
         emacs: line
     }
 })
+$env.PROMPT_INDICATOR = "󰚩  "
 
 
 ## STYLING
@@ -117,4 +107,19 @@ $env.PROMPT_COMMAND = {
 }
 
 ## Remove the time from the right hand side
-$env.PROMPT_COMMAND_RIGHT = ""
+let now = (date now)
+let month = ($now | format date "%B")
+let day = ($now | format date "%d" | str replace /^0/ "") # Removes leading zero if necessary
+
+
+$env.PROMPT_COMMAND_RIGHT = {
+  # Open file and navigate safely
+  let data = (open /home/hacky/.config/nushell/saints.json)
+
+  if ($month in $data) and ($day in ($data | get $month)) {
+      let $saint = ($data | get $month | get $day)
+      $"(ansi $cat_red_bold)($saint)"
+  } else {
+      "Go pray"
+  }
+}

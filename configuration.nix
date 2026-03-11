@@ -50,7 +50,7 @@
 
   users.users.hacky = {
     isNormalUser = true;
-    shell = pkgs.fish;
+    shell = pkgs.nushell;
     extraGroups = [
       "dialout"
       "libvirtd"
@@ -143,6 +143,8 @@
       ## Coding and Formatters
       alejandra
       any-nix-shell
+      carapace
+      carapace-bridge
       cargo
       clippy
       delve
@@ -165,6 +167,7 @@
     ++ (with pkgs-unstable; [
       brave
       dnsutils
+      fish
       powershell
       kdePackages.kwallet
       qbittorrent
