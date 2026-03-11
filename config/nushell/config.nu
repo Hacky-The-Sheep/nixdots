@@ -118,7 +118,7 @@ $env.PROMPT_COMMAND_RIGHT = {
 
   if ($month in $data) and ($day in ($data | get $month)) {
       let $saint = ($data | get $month | get $day)
-      $"(ansi $cat_red_bold)($saint)"
+      $"(ansi blue)($saint)"
   } else {
       "Go pray"
   }
