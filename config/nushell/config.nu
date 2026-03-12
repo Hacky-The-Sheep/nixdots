@@ -66,6 +66,11 @@ let cat_red_bold = {
   attr: b
 }
 
+let cat_peach_bold = {
+  fg: "#fab387"
+  attr: b
+}
+
 ### Get the OS
 def os_icon [] {
     let os = (sys host | get name | str downcase)
@@ -118,7 +123,7 @@ $env.PROMPT_COMMAND_RIGHT = {
 
   if ($month in $data) and ($day in ($data | get $month)) {
       let $saint = ($data | get $month | get $day)
-      $"(ansi blue)󰳵 ($saint) 󰳵 "
+      $"(ansi $cat_peach_bold)󰳵 ($saint) 󰳵 "
   } else {
       " Rosary Time"
   }
