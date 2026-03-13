@@ -8,7 +8,7 @@
     ../../system/ssh.nix
     ../../apps/install.nix
     ../../wm/hyprland.nix
-    ../../wm/hyprlock.nix
+    # ../../wm/hyprlock.nix
     ../../hosts/home/hyprmonitor.nix
   ];
 

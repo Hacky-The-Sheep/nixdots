@@ -81,7 +81,7 @@
         ## --- Main Binds --- ##
         "$mod, B, exec, brave"
         "$mod, E, exec, microsoft-edge-stable"
-        "$mod, L, exec, hyprlock"
+        "$mod, L, exec, noctalia-shell ipc call lockScreen lock"
         # "$mod, O, swapsplit, # dwindle"
         "$mod, P, pseudo, # dwindle"
         "$mod, Q, killactive "
