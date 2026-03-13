@@ -85,7 +85,7 @@
         # "$mod, O, swapsplit, # dwindle"
         "$mod, P, pseudo, # dwindle"
         "$mod, Q, killactive "
-        "$mod, R, exec, rofi -show drun"
+        "$mod, R, exec, noctalia-shell ipc call launcher toggle"
         "$mod, S, exec, /home/hacky/nixdots/scripts/screenshot.sh"
         "$mod, T, exec, ghostty"
         "$mod, V, togglefloating, q"
