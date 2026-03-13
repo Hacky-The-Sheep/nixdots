@@ -1,8 +1,9 @@
-{pkgs-unstable, ...}: {
+{ pkgs, ... }:
+{
   # Printer Drivers
   services.printing = {
     enable = true;
-    drivers = with pkgs-unstable; [
+    drivers = with pkgs; [
       brlaser
       cups-toshiba-estudio
       epsonscan2
