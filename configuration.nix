@@ -77,7 +77,7 @@
       helix
       makemkv
       mullvad-vpn
-      signal-desktop-bin
+      signal-desktop
 
       ## System Tools
       exfat
