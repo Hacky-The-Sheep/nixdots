@@ -100,6 +100,7 @@
       john
       nmap
       openvpn
+      quickshell
       ripgrep
       rlwrap
       screen
