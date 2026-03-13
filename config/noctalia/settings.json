@@ -69,7 +69,7 @@
         "rightClickFollowMouse": true,
         "screenOverrides": [
         ],
-        "showCapsule": true,
+        "showCapsule": false,
         "showOnWorkspaceSwitch": true,
         "showOutline": false,
         "useSeparateOpacity": false,
@@ -340,7 +340,7 @@
         "enableLockScreenMediaControls": false,
         "enableShadows": true,
         "forceBlackScreenCorners": false,
-        "iRadiusRatio": 1,
+        "iRadiusRatio": 2,
         "keybinds": {
             "keyDown": [
                 "Down"
@@ -374,7 +374,7 @@
         ],
         "lockScreenTint": 0,
         "passwordChars": false,
-        "radiusRatio": 1,
+        "radiusRatio": 2,
         "reverseScroll": false,
         "scaleRatio": 1.1,
         "screenRadiusRatio": 1,
@@ -573,10 +573,10 @@
     "ui": {
         "boxBorderEnabled": false,
         "fontDefault": "Sans Serif",
-        "fontDefaultScale": 1,
+        "fontDefaultScale": 1.1,
         "fontFixed": "monospace",
-        "fontFixedScale": 1,
-        "panelBackgroundOpacity": 0,
+        "fontFixedScale": 1.1099999999999999,
+        "panelBackgroundOpacity": 1,
         "panelsAttachedToBar": true,
         "settingsPanelMode": "attached",
         "settingsPanelSideBarCardStyle": false,
