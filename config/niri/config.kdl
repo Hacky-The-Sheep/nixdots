@@ -367,7 +367,7 @@ binds {
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+T hotkey-overlay-title="Open a Terminal: Ghostty  " { spawn "ghostty"; }
-    Mod+R hotkey-overlay-title="Run an Application: Rofi" { spawn-sh "rofi -show drun"; }
+    Mod+R hotkey-overlay-title="Run an Application: Noc-Launcher" { spawn-sh "noctalia-shell ipc call launcher toggle"; }
     Super+L hotkey-overlay-title="Lock the Screen: Hyprlock" { spawn-sh "hyprlock"; }
     Mod+Y hotkey-overlay-title="Signal" { spawn-sh "signal-desktop --ozone-platform-hint=auto"; }
     Mod+D hotkey-overlay-title="Discord" { spawn-sh "discord --ozone-platform-hint=auto"; }

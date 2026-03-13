@@ -1,7 +1,10 @@
 {
   inputs = {
-    nixpkgs.url = "nixpkgs/nixos-25.11";
-    nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
+    # nixpkgs.url = "nixpkgs/nixos-25.11";
+    # nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
+
+    # Let's go all unstable for now 3_13_26
+    nixpkgs.url = "nixpkgs/nixos-unstable";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     catppuccin.url = "github:catppuccin/nix/release-25.11";
     home-manager = {
@@ -10,11 +13,13 @@
     };
     noctalia = {
       url = "github:noctalia-dev/noctalia-shell";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
+      # inputs.nixpkgs.follows = "nixpkgs-unstable";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     hyprland = {
       url = "github:/hyprwm/Hyprland";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
+      # inputs.nixpkgs.follows = "nixpkgs-unstable";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
@@ -25,13 +30,13 @@
       hyprland,
       nixos-hardware,
       nixpkgs,
-      nixpkgs-unstable,
+      # nixpkgs-unstable,
       ...
     }@inputs:
     let
       system = "x86_64-linux";
       lib = nixpkgs.lib;
-      pkgs-unstable = import nixpkgs-unstable {
+      pkgs = import nixpkgs {
         system = "x86_64-linux";
         config.allowUnfree = true;
       };
@@ -42,7 +47,8 @@
         homie = lib.nixosSystem {
           specialArgs = {
             inherit inputs;
-            inherit pkgs-unstable;
+            # inherit pkgs-unstable;
+            inherit pkgs;
             inherit system;
             hostname = "homie";
           };
@@ -73,7 +79,8 @@
         work = lib.nixosSystem {
           specialArgs = {
             inherit inputs;
-            inherit pkgs-unstable;
+            # inherit pkgs-unstable;
+            inherit pkgs;
             inherit system;
             hostname = "workerbee";
           };
@@ -105,7 +112,8 @@
         fwork = lib.nixosSystem {
           specialArgs = {
             inherit inputs;
-            inherit pkgs-unstable;
+            # inherit pkgs-unstable;
+            inherit pkgs;
             inherit system;
             hostname = "fWork";
           };

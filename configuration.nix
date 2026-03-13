@@ -1,6 +1,6 @@
 {
   pkgs,
-  pkgs-unstable,
+  # pkgs-unstable,
   hostname,
   ...
 }:
@@ -70,8 +70,9 @@
     dconf.enable = true;
   };
 
-  environment.systemPackages =
-    (with pkgs; [
+  environment.systemPackages = (
+    with pkgs;
+    [
       ## General
       helix
       makemkv
@@ -164,8 +165,6 @@
       taplo
       vscode-langservers-extracted # Includes HTML/CSS/JSON/ESLINT
       yaml-language-server
-    ])
-    ++ (with pkgs-unstable; [
       brave
       dnsutils
       fish
@@ -176,7 +175,8 @@
       sshs
       syncthing
       tailscale
-    ]);
+    ]
+  );
 
   fonts.packages = with pkgs; [
     fira-code
