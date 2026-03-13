@@ -123,7 +123,7 @@ $env.PROMPT_COMMAND_RIGHT = {
 
   if ($month in $data) and ($day in ($data | get $month)) {
       let $saint = ($data | get $month | get $day)
-      $"(ansi $cat_peach_bold)󰳵 ($saint) 󰳵 "
+      $"(ansi $cat_peach_bold)($saint) "
   } else {
       " Rosary Time"
   }
