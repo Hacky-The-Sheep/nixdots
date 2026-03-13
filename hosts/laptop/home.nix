@@ -64,7 +64,7 @@
     gcr
 
     ## Main
-    pandoc
+    # pandoc
 
     ## Junk
     # discord

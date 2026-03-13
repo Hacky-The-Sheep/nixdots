@@ -48,7 +48,7 @@
           specialArgs = {
             inherit inputs;
             # inherit pkgs-unstable;
-            inherit pkgs;
+            # inherit pkgs;
             inherit system;
             hostname = "homie";
           };
@@ -61,7 +61,7 @@
             hyprland.nixosModules.default
             {
               home-manager = {
-                useGlobalPkgs = true;
+                # useGlobalPkgs = true;
                 useUserPackages = true;
                 backupFileExtension = "backup";
                 users.hacky = {
@@ -80,7 +80,7 @@
           specialArgs = {
             inherit inputs;
             # inherit pkgs-unstable;
-            inherit pkgs;
+            # inherit pkgs;
             inherit system;
             hostname = "workerbee";
           };
@@ -94,7 +94,7 @@
             hyprland.nixosModules.default
             {
               home-manager = {
-                useGlobalPkgs = true;
+                # useGlobalPkgs = true;
                 useUserPackages = true;
                 backupFileExtension = "backup";
                 users.hacky = {
@@ -113,7 +113,7 @@
           specialArgs = {
             inherit inputs;
             # inherit pkgs-unstable;
-            inherit pkgs;
+            # inherit pkgs;
             inherit system;
             hostname = "fWork";
           };
@@ -127,7 +127,7 @@
             hyprland.nixosModules.default
             {
               home-manager = {
-                useGlobalPkgs = true;
+                # useGlobalPkgs = true;
                 useUserPackages = true;
                 backupFileExtension = "backup";
                 users.hacky = {
