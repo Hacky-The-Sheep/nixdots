@@ -20,8 +20,8 @@ alias gs = git status
 # YDL500
 alias yty = yt-dlp -o '%(uploader)s/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s'
 alias ytu = yt-dlp -o '~/MyVideos/%(playlist)s/%(chapter_number)s - %(chapter)s/%(title)s.%(ext)s'
-alias ydl = yt-dlp --prefer-ffmpeg --merge-output-format mkv
-alias ymp4 = yt-dlp --prefer-ffmpeg --merge-output-format mp4
+alias ydl = yt-dlp --merge-output-format mkv
+alias ymp4 = yt-dlp --merge-output-format mp4
 alias ymp3 = yt-dlp --extract-audio --audio-format mp3
 
 # NIX
