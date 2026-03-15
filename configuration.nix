@@ -40,6 +40,8 @@
     openssh.enable = true;
     resolved.enable = true;
     tailscale.enable = true;
+    displayManager.ly.enable = true;
+    desktopManager.gnome.enable = true;
   };
 
   security = {
