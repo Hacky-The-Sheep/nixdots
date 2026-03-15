@@ -10,7 +10,6 @@ let carapace_completer = {|spans|
 
 # ALIASES
 alias ei = exit
-# alias hx = helix
 
 # GIT ALIASES
 alias ga = git add
@@ -27,13 +26,8 @@ alias ymp3 = yt-dlp --extract-audio --audio-format mp3
 # NIX
 alias clcon = nix-env --delete-generations 14d
 alias gecon = nix-store --gc
-
-# Nix-Shell
-let nix_shell_suffix = if ($env.IN_NIX_SHELL? | is-not-empty) {
-  $" | (ansi light_blue_bold)nix(ansi reset)"
-} else {
-  ""
-}
+alias ns = nix-shell --run nu
+alias nd = nix develop -c nu
 
 ## ENV Variables
 $env.config.completions.algorithm = "substring"
@@ -65,11 +59,15 @@ let cat_red_bold = {
   fg: '#f38ba8'
   attr: b
 }
-
 let cat_peach_bold = {
   fg: "#fab387"
   attr: b
 }
+let cat_white_bold = {
+  fg: '#cdd6f4'
+  attr: b
+}
+
 
 ### Get the OS
 def os_icon [] {
@@ -89,6 +87,14 @@ $env.PROMPT_COMMAND = {
     } else {
         ""
     }
+
+    # Nix-Shell
+    let nix_shell = if ("IN_NIX_SHELL" in $env) {
+        $"[NIX_BTW] "
+    } else {
+        ""
+    }
+
     let os = (os_icon)
     let host = (sys host | get hostname)
     let cwd  = ($env.PWD | path relative-to "/home/hacky/")
@@ -108,7 +114,7 @@ $env.PROMPT_COMMAND = {
     let git_current_ref = (do { git rev-parse --abbrev-ref HEAD } | complete | get stdout | str trim)
     let git_segment = if ($git_current_ref != "") {$"(ansi reset) (ansi yellow)($git_current_ref)($git_indicator)"}
 
-    $"(ansi white)($ssh)(ansi blue)($os) on (ansi $cat_red_bold)($host) (ansi blue)($cwd)($git_segment)\n"
+    $"(ansi $cat_white_bold)($ssh)($nix_shell)(ansi blue)($os) on (ansi $cat_red_bold)($host) (ansi blue)($cwd)($git_segment)\n"
 }
 
 ## Remove the time from the right hand side
