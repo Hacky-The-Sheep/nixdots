@@ -24,8 +24,8 @@ alias ymp4 = yt-dlp --merge-output-format mp4
 alias ymp3 = yt-dlp --extract-audio --audio-format mp3
 
 # NIX
-alias clcon = nix-env --delete-generations 14d
-alias gecon = nix-store --gc
+alias clcon = nix-env --delete-generations +7
+alias gecon = nix-collect-garbage -d
 alias ns = nix-shell --run nu
 alias nd = nix develop -c nu
 
