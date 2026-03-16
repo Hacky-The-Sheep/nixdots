@@ -64,6 +64,7 @@
     gcr
 
     ## Main
+    calibre
     pandoc
 
     ## Junk
