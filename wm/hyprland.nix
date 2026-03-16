@@ -131,6 +131,16 @@
         "alt, mouse:272, movewindow"
         "alt, mouse:273, resizewindow"
       ];
+      bindel = [
+        ## Brightness
+        ", XF86MonBrightnessUp, exec, brightnessctl --class=backlight set +10%"
+        ", XF86MonBrightnessDown, exec, brightnessctl --class=backlight set 10%-"
+
+        #Volume
+        ", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+"
+        ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"
+        ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+      ];
     };
   };
 }
