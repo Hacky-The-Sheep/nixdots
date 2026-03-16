@@ -2,12 +2,13 @@
   config,
   pkgs,
   ...
-}: {
+}:
+{
   imports = [
     ../../system/ssh.nix
     ../../apps/install.nix
     ../../wm/hyprland.nix
-    ../../wm/hyprlock.nix
+    # ../../wm/hyprlock.nix
     ../../hosts/work/hyprmonitor.nix
   ];
 
@@ -16,6 +17,13 @@
     homeDirectory = "/home/hacky";
     stateVersion = "25.11";
     enableNixpkgsReleaseCheck = false;
+  };
+
+  gtk = {
+    enable = true;
+    colorScheme = "dark";
+    gtk3.extraConfig.gtk-application-prefer-dark-theme = 1;
+    gtk4.extraConfig.gtk-application-prefer-dark-theme = 1;
   };
 
   nixpkgs.config = {
@@ -56,6 +64,7 @@
     gcr
 
     ## Main
+    calibre
     pandoc
 
     ## Junk
@@ -70,6 +79,18 @@
     };
     "nushell" = {
       source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/nushell/";
+      recursive = true;
+    };
+    "helix" = {
+      source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/helix/";
+      recursive = true;
+    };
+    "fish" = {
+      source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/fish/";
+      recursive = true;
+    };
+    "niri" = {
+      source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/niri/";
       recursive = true;
     };
   };
