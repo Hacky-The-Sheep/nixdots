@@ -2,14 +2,15 @@
   programs.alacritty = {
     enable = true;
 
-    window = {
-      opacity = 0.6;
-      blur = true;
-    };
+    settings = {
+      window = {
+        opacity = 0.6;
+        blur = true;
+      };
 
-    font = {
-      size = 16.0;
-      normal = "Iosevka";
+      font = {
+        size = 16.0;
+      };
     };
   };
 }
