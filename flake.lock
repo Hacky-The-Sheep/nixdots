@@ -97,19 +97,11 @@
         ]
       },
       "locked": {
-<<<<<<< HEAD
-        "lastModified": 1773681845,
-        "narHash": "sha256-o8hrZrigP0JYcwnglCp8Zi8jQafWsxbDtRRPzuVwFxY=",
-        "owner": "nix-community",
-        "repo": "home-manager",
-        "rev": "0759e0e137305bc9d0c52c204c6d8dffe6f601a6",
-=======
         "lastModified": 1774875830,
         "narHash": "sha256-WPYlTmZvVa9dWlAziFkVjBdv1Z6giNIq40O1DxsBmiI=",
         "owner": "nix-community",
         "repo": "home-manager",
         "rev": "7afd8cebb99e25a64a745765920e663478eb8830",
->>>>>>> 5027117 (flake update and Nix-shell colors and aliases)
         "type": "github"
       },
       "original": {
@@ -196,19 +188,11 @@
         "xdph": "xdph"
       },
       "locked": {
-<<<<<<< HEAD
-        "lastModified": 1773926276,
-        "narHash": "sha256-dasCo1RATJvJWjPaVkbXPvjbWE+4f69bnRNGwtsh7Ao=",
-        "owner": "hyprwm",
-        "repo": "Hyprland",
-        "rev": "ad46ff635bcf7b4877b03e97d8e85468f025f4a1",
-=======
         "lastModified": 1774915174,
         "narHash": "sha256-T4vmNkkd1JmyNSKFb1TMtNmKDFImRmgD563RwaGv1xc=",
         "owner": "hyprwm",
         "repo": "Hyprland",
         "rev": "91916a2d94eee0b72eb8e7e033511bbf173879eb",
->>>>>>> 5027117 (flake update and Nix-shell colors and aliases)
         "type": "github"
       },
       "original": {
@@ -482,19 +466,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-<<<<<<< HEAD
-        "lastModified": 1773821835,
-        "narHash": "sha256-TJ3lSQtW0E2JrznGVm8hOQGVpXjJyXY2guAxku2O9A4=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "b40629efe5d6ec48dd1efba650c797ddbd39ace0",
-=======
         "lastModified": 1774709303,
         "narHash": "sha256-D3Q07BbIA2KnTcSXIqqu9P586uWxN74zNoCH3h2ESHg=",
         "owner": "NixOS",
         "repo": "nixpkgs",
         "rev": "8110df5ad7abf5d4c0f6fb0f8f978390e77f9685",
->>>>>>> 5027117 (flake update and Nix-shell colors and aliases)
         "type": "github"
       },
       "original": {
@@ -511,19 +487,11 @@
         "noctalia-qs": "noctalia-qs"
       },
       "locked": {
-<<<<<<< HEAD
-        "lastModified": 1773935604,
-        "narHash": "sha256-l9L0sqJt8BTBHmnihwLXcLHcTukO3b12nhGYQKB9kO8=",
-        "owner": "noctalia-dev",
-        "repo": "noctalia-shell",
-        "rev": "21c191d6752d8d5e49ac72bf194eb6da139562b9",
-=======
         "lastModified": 1774920276,
         "narHash": "sha256-nynVyNuy8SDh2nZWfeov6RAhvsaTAeAQHZog7lBK+A0=",
         "owner": "noctalia-dev",
         "repo": "noctalia-shell",
         "rev": "421ccc4c87228878b0eb29d3d1faead875c49c28",
->>>>>>> 5027117 (flake update and Nix-shell colors and aliases)
         "type": "github"
       },
       "original": {
@@ -542,19 +510,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-<<<<<<< HEAD
-        "lastModified": 1773842483,
-        "narHash": "sha256-oRqz+5AbNKfUWWwN5c83CsSOsUWVGITh0HZg+wX5Q/8=",
-        "owner": "noctalia-dev",
-        "repo": "noctalia-qs",
-        "rev": "3962ff1e0b59ef067c57199d31271ddbf23b29cd",
-=======
         "lastModified": 1774902752,
         "narHash": "sha256-WC3SgVJX+N78KnRf1v9Z2VowkJBc9SBKpaZsWxWm/Rs=",
         "owner": "noctalia-dev",
         "repo": "noctalia-qs",
         "rev": "4f0ceff244748ec55cfccc4f674759a7a2941b18",
->>>>>>> 5027117 (flake update and Nix-shell colors and aliases)
         "type": "github"
       },
       "original": {
