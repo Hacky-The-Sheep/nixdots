@@ -1,6 +1,6 @@
 {
   imports = [
-    ./alacritty.nix
+    # ./alacritty.nix
     ./btop.nix
     ./fastfetch.nix
     ./ghostty.nix

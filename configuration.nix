@@ -153,8 +153,10 @@
       delve
       go
       gopls
+      hyprpolkitagent
       marksman
       markdown-oxide
+      microsoft-edge
       nixd
       nixfmt
       openssl
