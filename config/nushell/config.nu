@@ -10,6 +10,7 @@ let carapace_completer = {|spans|
 
 # ALIASES
 alias ei = exit
+alias nb = newsboat
 
 # GIT ALIASES
 alias ga = git add
