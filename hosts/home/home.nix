@@ -72,6 +72,8 @@
     monero-gui
     obs-studio
     qFlipper
+    qbittorrent
+    qbittorrent-cli
   ];
 
   xdg.configFile = {

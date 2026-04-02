@@ -173,7 +173,6 @@
       fish
       powershell
       kdePackages.kwallet
-      qbittorrent
       remmina
       sshs
       syncthing
