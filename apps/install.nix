@@ -5,6 +5,7 @@
     ./fastfetch.nix
     ./ghostty.nix
     ./mpv.nix
+    ./newsboat.nix
     ./rofi.nix
     ./starship.nix
   ];
