@@ -1,15 +1,20 @@
-{
-  config,
-  pkgs,
-  ...
-}:
+{ config, pkgs, ... }:
+
+let
+  dotfiles = "${config.home.homeDirectory}/nixdots/config";
+
+  mkLink = name: {
+    source = config.lib.file.mkOutOfStoreSymlink "${dotfiles}/${name}";
+    recursive = true;
+  };
+in
 {
   imports = [
     ../../apps/install.nix
-    ../../hosts/laptop/hyprmonitor.nix
     ../../system/ssh.nix
     ../../wm/hyprland.nix
     ../../wm/hyprlock.nix
+    ../../hosts/laptop/hyprmonitor.nix
   ];
 
   home = {
@@ -19,31 +24,18 @@
     enableNixpkgsReleaseCheck = false;
   };
 
-  nixpkgs.config = {
-    allowUnfree = true;
+  nixpkgs.config.allowUnfree = true;
+
+  gtk = {
+    enable = true;
+    colorScheme = "dark";
+
+    gtk3.extraConfig.gtk-application-prefer-dark-theme = 1;
+    gtk4.extraConfig.gtk-application-prefer-dark-theme = 1;
   };
 
-  dconf = {
-    settings = {
-      "org/gnome/desktop/interface" = {
-        color-scheme = "prefer-dark";
-      };
-    };
-  };
-
-  programs = {
-    git = {
-      enable = true;
-      settings = {
-        user.name = "hacky";
-        user.email = "jon.nguyen7@protonmail.com";
-      };
-    };
-    home-manager.enable = true;
-  };
-
-  services = {
-    gnome-keyring.enable = true;
+  dconf.settings."org/gnome/desktop/interface" = {
+    color-scheme = "prefer-dark";
   };
 
   catppuccin = {
@@ -52,44 +44,33 @@
     accent = "peach";
   };
 
-  gtk = {
-    enable = true;
-    colorScheme = "dark";
-    gtk3.extraConfig.gtk-application-prefer-dark-theme = 1;
-    gtk4.extraConfig.gtk-application-prefer-dark-theme = 1;
+  programs = {
+    home-manager.enable = true;
+
+    git = {
+      enable = true;
+      settings = {
+        user.name = "hacky";
+        user.email = "jon.nguyen7@protonmail.com";
+      };
+    };
   };
+
+  services.gnome-keyring.enable = true;
 
   home.packages = with pkgs; [
     ## Secrets
     gcr
 
-    ## Main
-    # pandoc
-
-    ## Junk
-    # discord
-    # monero-gui
-    # obs-studio
+    ## Apps
     qFlipper
     qbittorrent
   ];
 
   xdg.configFile = {
-    "helix" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/helix/";
-      recursive = true;
-    };
-    "niri" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/niri/";
-      recursive = true;
-    };
-    "nushell" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/nushell/";
-      recursive = true;
-    };
-    "noctalia" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/noctalia/";
-      recursive = true;
-    };
+    helix = mkLink "helix";
+    niri = mkLink "niri";
+    nushell = mkLink "nushell";
+    noctalia = mkLink "noctalia";
   };
 }

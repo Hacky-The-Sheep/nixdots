@@ -1,14 +1,18 @@
-{
-  config,
-  pkgs,
-  ...
-}:
+{ config, pkgs, ... }:
+
+let
+  dotfiles = "${config.home.homeDirectory}/nixdots/config";
+
+  mkLink = name: {
+    source = config.lib.file.mkOutOfStoreSymlink "${dotfiles}/${name}";
+    recursive = true;
+  };
+in
 {
   imports = [
     ../../system/ssh.nix
     ../../apps/install.nix
     ../../wm/hyprland.nix
-    # ../../wm/hyprlock.nix
     ../../hosts/home/hyprmonitor.nix
   ];
 
@@ -19,38 +23,18 @@
     enableNixpkgsReleaseCheck = false;
   };
 
+  nixpkgs.config.allowUnfree = true;
+
   gtk = {
     enable = true;
     colorScheme = "dark";
+
     gtk3.extraConfig.gtk-application-prefer-dark-theme = 1;
     gtk4.extraConfig.gtk-application-prefer-dark-theme = 1;
   };
 
-  nixpkgs.config = {
-    allowUnfree = true;
-  };
-
-  dconf = {
-    settings = {
-      "org/gnome/desktop/interface" = {
-        color-scheme = "prefer-dark";
-      };
-    };
-  };
-
-  programs = {
-    git = {
-      enable = true;
-      settings = {
-        user.name = "hacky";
-        user.email = "jon.nguyen7@protonmail.com";
-      };
-    };
-    home-manager.enable = true;
-  };
-
-  services = {
-    gnome-keyring.enable = true;
+  dconf.settings."org/gnome/desktop/interface" = {
+    color-scheme = "prefer-dark";
   };
 
   catppuccin = {
@@ -58,6 +42,20 @@
     flavor = "mocha";
     accent = "peach";
   };
+
+  programs = {
+    home-manager.enable = true;
+
+    git = {
+      enable = true;
+      settings = {
+        user.name = "hacky";
+        user.email = "jon.nguyen7@protonmail.com";
+      };
+    };
+  };
+
+  services.gnome-keyring.enable = true;
 
   home.packages = with pkgs; [
     ## Secrets
@@ -67,8 +65,7 @@
     calibre
     pandoc
 
-    ## Junk
-    # discord
+    ## Misc
     monero-gui
     obs-studio
     qFlipper
@@ -77,29 +74,10 @@
   ];
 
   xdg.configFile = {
-    "noctalia" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/noctalia/";
-      recursive = true;
-    };
-    "nushell" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/nushell/";
-      recursive = true;
-    };
-    "helix" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/helix/";
-      recursive = true;
-    };
-    "fish" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/fish/";
-      recursive = true;
-    };
-    # "starship" = {
-    #   source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/starship/";
-    #   recursive = true;
-    # };
-    "niri" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/niri/";
-      recursive = true;
-    };
+    noctalia = mkLink "noctalia";
+    nushell = mkLink "nushell";
+    helix = mkLink "helix";
+    fish = mkLink "fish";
+    niri = mkLink "niri";
   };
 }
