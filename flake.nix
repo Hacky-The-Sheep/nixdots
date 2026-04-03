@@ -80,6 +80,10 @@
           hostname = "homie";
           hardware = ./hosts/home/hardware-configuration.nix;
           homePath = ./hosts/home/home.nix;
+
+          extraModules = [
+            ./hosts/home
+          ];
         };
 
         work = mkHost {
