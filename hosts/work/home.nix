@@ -93,5 +93,9 @@
       source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/niri/";
       recursive = true;
     };
+    "waybar" = {
+      source = config.lib.file.mkOutOfStoreSymlink "/home/hacky/nixdots/config/waybar/";
+      recursive = true;
+    };
   };
 }
