@@ -5,101 +5,94 @@
     ## General
     helix
     makemkv
-    signal-desktop
     mullvad-vpn
+    signal-desktop
 
     ## System
-    git
-    wget
-    unzip
-    usbutils
-    ntfs3g
     exfat
     ffmpeg
+    git
     handbrake
     libdvdcss
+    ntfs3g
+    unzip
+    usbutils
+    wget
 
     ## CLI
-    eza
     fastfetch
     fd
+    ffuf
+    gobuster
+    john
+    nmap
+    openvpn
     ripgrep
     rlwrap
     screen
-    starship
+    thc-hydra
     yazi
     yt-dlp
-    ffuf
-    gobuster
-    nmap
-    openvpn
-    thc-hydra
-    john
 
     ## Wayland / WM
+    alsa-utils
+    brightnessctl
+    dunst
     grim
+    networkmanager_dmenu
     slurp
     wl-clipboard
-    waybar
-    swww
-    brightnessctl
-    alsa-utils
-    dunst
-    networkmanager_dmenu
     xdg-desktop-portal-wlr
     xwayland-satellite
 
     ## GUI
-    nautilus
     gnome-disk-utility
     gvfs
+    nautilus
 
     ## Work
     libreoffice
+    onlyoffice-desktopeditors
     wireshark
 
     ## Dev
     alejandra
-    nixfmt
-    nixd
     any-nix-shell
-    cargo
-    rustc
-    rustfmt
-    rust-analyzer
-    clippy
-    go
-    gopls
-    delve
-    python315
-    ruff
-    marksman
-    markdown-oxide
-    taplo
-    yaml-language-server
-    vscode-langservers-extracted
     carapace
     carapace-bridge
+    cargo
+    clippy
+    delve
+    go
+    gopls
+    markdown-oxide
+    marksman
+    nixd
+    nixfmt
+    python315
+    ruff
+    rust-analyzer
+    rustc
+    rustfmt
+    taplo
+    vscode-langservers-extracted
+    yaml-language-server
 
     ## Apps
     brave
+    dnsutils
+    fish
+    kdePackages.kwallet
     microsoft-edge
+    openssl
+    powershell
     remmina
+    sshs
     syncthing
     tailscale
-    dnsutils
-    openssl
-    sshs
-    fish
-    powershell
-    kdePackages.kwallet
 
     ## Media / Theming
     kdePackages.kdenlive
-    material-cursors
-    fluent-icon-theme
-    reversal-icon-theme
-    tela-icon-theme
   ];
 
   fonts.packages = with pkgs; [
