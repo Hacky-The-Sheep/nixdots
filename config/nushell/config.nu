@@ -4,6 +4,9 @@ $env.config.show_banner = false
 # Editor
 # $env.EDITOR = "hx"
 
+# Path
+$env.PATH ++= ['/home/hacky/.cargo/bin']
+
 let carapace_completer = {|spans|
     carapace $spans.0 nushell ...$spans | from json
 }
